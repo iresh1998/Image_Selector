@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>surapappa</title>
+    <title></title>
     <style>
         .image-container {
             margin-bottom: 20px;
@@ -130,13 +130,12 @@
             formInputs.forEach(input => {
                 const answer = input.value;
                 const imageName = input.name.replace('image_', '');
-                const imageSrc = `image${imageName}.jpg`; // Assuming image names follow a pattern like image1.jpg, image2.jpg, etc.
 
                 const row = summaryBody.insertRow();
                 const imageCell = row.insertCell();
                 const answerCell = row.insertCell();
 
-                imageCell.innerHTML = `<img src="${imageSrc}" alt="Image ${imageName}">`;
+                imageCell.textContent = `img${imageName}`; // Display image numbers as 'img1', 'img2', etc.
                 answerCell.textContent = answer;
             });
 
